@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href = '/static/res.css' />
+    </head>
+    <body>
+      
+<div  style="margin: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);"  >
+      
+<form action="{{ url_for('eg')}}" method="post">
+  
+  <h2><label for="Weight(kg)">Provid your weight in kg:</label></h2>
+  <input type="text" name="wgt" placeholder="Weight">
+  <br>
+  
+  <h2><label for="Height(m)">Provide your height in meters:</label></h2>
+  <input type="text" name="hgt" placeholder="Height">
+  <button type="submit">Login</button>
+
+  </form>
+
+
+  <br>
+
+    {% if bmi == "zero": %}
+   
+    {% else %}
+    <h1  class="result">This is your bmi => {{bmi}} </h1>
+    {% endif %}
+
+
+</div>
+
+  
+
+    </body>
+
+
+</html>
